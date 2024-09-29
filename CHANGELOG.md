@@ -1,5 +1,64 @@
 # Changelog
 
+# Changelog: v10 to v10.1
+
+## Major Changes
+
+1. **Default Directory Structure**
+   - Implemented default input and output directories at `\data\input` and `\data\output` respectively.
+   - Updated the Postprocess tab to reflect these default directories.
+
+2. **Link Extractor Enhancement**
+   - Modified the Link Extractor to save extracted links to a text file in the `\data\input` directory.
+   - Enabled automatic loading of the most recent link file in the Scrape tab.
+
+## Detailed Changes
+
+### Link Extractor (`src/link_extractor.py`)
+- Added functionality to save extracted links to a text file in `\data\input`.
+- Updated the `run_extractor` method to return information about the saved file.
+
+### Integrated App (`src/integrated_app.py`)
+- Updated the Gradio interface to reflect new default directories.
+- Modified the Postprocess tab to use `data/output` as both default input and output directories.
+
+### Scraper (`src/scraper.py`)
+- Enhanced the `run_scraper` method to handle cases where no file is uploaded.
+- Implemented logic to use the most recent file in `\data\input` if no file is explicitly provided.
+- Updated file handling to work with the new directory structure.
+
+## User Experience Improvements
+
+1. **Streamlined Workflow**
+   - Users can now seamlessly move from link extraction to scraping without manual file handling.
+   - Postprocessing now uses a consistent directory for input and output, simplifying the user workflow.
+
+2. **Increased Automation**
+   - Automatic selection of the most recent input file reduces manual intervention.
+   - Direct saving of extracted links provides a more integrated experience between link extraction and scraping.
+
+## Backend Enhancements
+
+1. **Improved Error Handling**
+   - Added more descriptive error messages for file not found and empty URL list scenarios.
+
+2. **Logging Enhancements**
+   - Expanded logging to cover new file operations and automatic file selection processes.
+
+## Documentation Updates
+
+- Updated README to reflect new default directory structure and enhanced workflow.
+- Added explanations for the automatic file selection in the Scrape tab.
+
+## Bug Fixes
+
+- Resolved potential issues with file path handling across different operating systems.
+- Fixed edge cases where empty input directories could cause errors.
+
+---
+
+This update focuses on improving the user experience by implementing a more intuitive directory structure and enhancing the integration between different components of the application. The changes make the tool more user-friendly and reduce the need for manual intervention between steps.
+
 # Changelog: v9 to v10
 
 ## Major Changes
