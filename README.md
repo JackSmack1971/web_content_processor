@@ -20,7 +20,7 @@ Web Content Processor is an integrated tool for web scraping, link extraction, a
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/web_content_processor.git
+   git clone https://github.com/JackSmack1971/web_content_processor.git
    cd web_content_processor
    ```
 
